@@ -1,0 +1,33 @@
+.course-top {
+  background-image: url("/assets/topBg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.course-top h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.course-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+.course-img {
+  filter: brightness(1.6);
+}
+
+@media screen and (width < 500px) {
+  .course-top h1 {
+    font-size: 3rem;
+  }
+  .trainer-text {
+    width: 90vw !important;
+  }
+
+  .course-trainer {
+    flex-direction: column-reverse;
+  }
+}

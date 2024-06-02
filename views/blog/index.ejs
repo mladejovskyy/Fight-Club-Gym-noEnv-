@@ -1,0 +1,23 @@
+<% layout('layouts/blogBoilerplate')%>
+
+<div class="container">
+  <div class="blog-posts row flex flex-row-reverse justify-evenly mt-5">
+    <% for (let post of posts) { %>
+
+    <div class="px-1blog-post col-4 mb-3">
+      <div class="">
+        <img src="<%= post.image%>" class="img-fluid blog-img" />
+      </div>
+      <div class="">
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title%></h5>
+          <!-- <p class="card-text blog-post-text"><%= post.body%></p> -->
+
+          <a href="/blog/<%=post._id%>" class="">Read more >></a>
+        </div>
+      </div>
+    </div>
+
+    <% } %>
+  </div>
+</div>

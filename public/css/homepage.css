@@ -1,0 +1,304 @@
+/* Carousel */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 91vh;
+  padding-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.slide h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slide .button,
+form .button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--clr-main);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* About us */
+
+.homepage-p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.homepage-h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#about-us,
+#contact,
+#reviews {
+  padding-top: 20vh;
+}
+
+#courses {
+  padding-top: 10vh;
+}
+
+.homepage-gallery {
+  padding: 5vh 0;
+  padding-top: 10vh;
+}
+
+.homepage-gallery h2 {
+  text-align: center;
+}
+
+.gallery-photos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gallery-img {
+  width: 30vw;
+}
+
+/* Reviews */
+#reviews {
+  padding-bottom: 20vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-wrapper {
+  background-color: #141414;
+  margin-top: 15vh;
+}
+
+.reviews-container .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.review {
+  background-color: #101010;
+  border-radius: 1rem;
+  transition: all 0.1s linear;
+  border: 1px solid #a8002000;
+  width: 25vw !important  ;
+  margin: 0 1vw;
+}
+
+.review:hover {
+  border: 1px solid #a8001fb3;
+}
+
+.review-upper {
+  display: flex;
+}
+
+.review-img-wrapper {
+  width: 30%;
+  height: 100px;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translateY(-15px);
+}
+
+.review-heading h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.review-heading h4 {
+  color: var(--clr-main);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.review-lower p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Courses */
+
+.homepage-courses {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0vh;
+}
+.homepage-course {
+  width: 22vw;
+  height: 22vw;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 30px;
+}
+
+a.homepage-course:hover {
+  color: #fff;
+  filter: brightness(1.4);
+}
+
+.homepage-course-kickbox {
+  background-image: url(/assets/course-kickbox.png);
+}
+.homepage-course-grappling {
+  background-image: url(/assets/course-grappling.png);
+}
+.homepage-course-mma {
+  background-image: url(/assets/course-mma.png);
+}
+
+/* Contact */
+
+.homepage-contact-h2 {
+  margin-bottom: 0 !important;
+}
+
+.homepage-contact-p {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+#contact {
+  margin-bottom: 20vh !important;
+}
+
+/* RESPONSIVITY */
+
+@media screen and (width < 1080px) {
+  .laptop-hidden {
+    display: none !important ;
+  }
+
+  .review {
+    width: 38vw !important;
+  }
+
+  .homepage-course {
+    font-size: 2rem;
+    width: 25vw;
+    height: 25vw;
+    margin: 0;
+  }
+}
+
+@media screen and (width < 770px) {
+  .review {
+    width: 42vw !important;
+  }
+
+  .homepage-course {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (width < 500px) {
+  .phone-hidden {
+    display: none !important;
+  }
+
+  .homepage-h2 {
+    font-size: 3.2rem;
+  }
+
+  .review {
+    width: 90vw !important;
+  }
+  .phone-l-fw {
+    width: 85% !important;
+  }
+
+  .homepage-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-img {
+    width: 80vw;
+    margin-bottom: 10px;
+  }
+
+  .homepage-courses {
+    flex-direction: column;
+  }
+
+  .homepage-course {
+    width: 90vw;
+    height: 35vw;
+    margin-bottom: 15px;
+  }
+}

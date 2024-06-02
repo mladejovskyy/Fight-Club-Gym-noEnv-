@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate')%> <%if(!err.message == 'Page Not Found') {%>
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading"><%= err.message%></h4>
+      <p><%= err.stack%></p>
+      <hr />
+      <p class="mb-0">
+        Whenever you need to, be sure to use margin utilities to keep things
+        nice and tidy.
+      </p>
+    </div>
+  </div>
+</div>
+<%} else {%>
+<div class="text-center pagenotfound">
+  <div class="col-4 offset-4">
+    <div class="" role="alert">
+      <h1 class="error-code mb-0">404</h1>
+      <h2 class="error-heading mb-4">Page not found</h2>
+      <a class="btn btn-dark" href="/">Back to homepage</a>
+    </div>
+  </div>
+</div>
+<%}%>

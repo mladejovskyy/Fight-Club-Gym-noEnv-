@@ -1,0 +1,55 @@
+<% layout('layouts/blogBoilerplate')%>
+
+<div class="my-5 my-5">
+  <h1 class="text-center">Edit Post</h1>
+  <div class="col-6 offset-3">
+    <form
+      action="/blog/<%=post._id%>?_method=PUT"
+      method="POST"
+      novalidate
+      class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          name="post[title]"
+          id="title"
+          value="<%=post.title%>"
+          required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="image">Image URL</label>
+        <input
+          class="form-control"
+          type="text"
+          name="post[image]"
+          id="image"
+          value="<%=post.image%>"
+          required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="body">Text</label>
+        <textarea
+          class="form-control"
+          type="text"
+          name="post[body]"
+          id="body"
+          rows="5"
+          required>
+<%=post.body%></textarea
+        >
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <button class="btn btn-info text-light">Update Post</button>
+      </div>
+    </form>
+    <a href="/blog/<%=post._id%>">Back to post</a>
+  </div>
+</div>

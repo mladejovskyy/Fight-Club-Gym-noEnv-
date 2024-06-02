@@ -1,0 +1,22 @@
+.nav-link {
+  color: rgba(0, 0, 0, 0.8) !important;
+  transition: all 0.1s linear;
+  font-weight: 500;
+  font-size: 1.05rem !important;
+}
+.nav-link:hover {
+  color: var(--clr-main) !important;
+}
+
+@media screen and (width > 1000px) {
+  #navbarNavDropdown {
+    margin-left: 5vw !important;
+  }
+
+  .nav-item {
+    margin: 0 5px;
+  }
+  .nav-login {
+    display: flex;
+  }
+}

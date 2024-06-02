@@ -1,0 +1,27 @@
+footer {
+  background-color: #2e020b;
+}
+.footer-links p a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.1s linear;
+  font-weight: 500;
+}
+.footer-links p a:hover {
+  color: #fff !important;
+}
+
+.footer-down .row div:nth-of-type(1) {
+  text-align: left;
+}
+
+.footer-down .row div:nth-of-type(2) {
+  text-align: right;
+}
+.footer-author a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-author a:hover {
+  text-decoration: underline;
+}
