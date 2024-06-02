@@ -61,7 +61,7 @@
       <div class="card mb-3 p-2 col-8">
         <div class="comment-username mb-1"><%=comment.username%>:</div>
         <div class="comment-body"><%=comment.body%></div>
-        <% if( currentUser && post.author.equals(currentUser._id)) {%>
+        <% if( currentUser ) {%>
         <form
           action="/blog/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE"
           method="POST">
