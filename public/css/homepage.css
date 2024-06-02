@@ -42,13 +42,20 @@
 
 .slide .button,
 form .button {
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
+  padding: 10px 30px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid var(--clr-main);
   border-radius: var(--radius);
   background-color: var(--clr-main);
   color: var(--clr-white);
   cursor: pointer;
+  transition: all 0.15s linear;
+}
+.slide .button:hover,
+form .button:hover {
+  box-shadow: 0 5px 15px rgba(148, 23, 23, 0.8);
 }
 
 .pagination {
@@ -88,8 +95,7 @@ form .button {
 }
 
 #about-us,
-#contact,
-#reviews {
+#contact {
   padding-top: 20vh;
 }
 
@@ -117,7 +123,8 @@ form .button {
 
 /* Reviews */
 #reviews {
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
+  padding-top: 15vh;
   width: 95vw;
   display: flex;
   flex-direction: column;
@@ -126,7 +133,7 @@ form .button {
 
 .reviews-wrapper {
   background-color: #141414;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 
 .reviews-container .row {
@@ -153,7 +160,7 @@ form .button {
 
 .review-img-wrapper {
   width: 30%;
-  height: 100px;
+  height: 140px;
   border-radius: 0.2rem;
   overflow: hidden;
   position: relative;
@@ -161,7 +168,7 @@ form .button {
 
 .review-img {
   width: 100%;
-  height: auto;
+  height: 140px;
   object-fit: cover;
   transform: translateY(-15px);
 }
